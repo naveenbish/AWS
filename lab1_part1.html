@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="lab1_Sop.html"> < Click here to go back</a>
+    <h4>Agenda : </h4>
+    <h5>If we need to Store data of any instance or to restore data from S3 bucket then we used to create IAM role for S3 bucket and apply it to our instance.</h5>
+    <h1>Accessing S3 using CLI</h1>
+    <hr>
+    <ol>
+        <span>Step to be followed.</span>
+        <li>Click on IAM</li>
+        <li>Click on Roll</li>
+        <li>Select EC2</li>
+        <li>Select AmazonS3FullAccess</li>
+        <li>Put Name of the Role and Create it.</li>
+        <li>Select Instance.</li>
+        <li>Click on Action</li>
+        <li>Security</li>
+        <li>Modify IAM role</li>
+        <li>Select Your Created Role.</li>
+        <li>Now go to your server "ssh -i pemkey ubuntu@'IP'.</li>
+        <li>Install awscli in the server.</li>
+        <li>
+            <span>Command used to install awscli on ubuntu.</span>
+            <ul>
+                <li>wget https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip</li>
+                <li>apt install unzip</li>
+                <li>unzip awscli-exe-linux-x86_64.zip</li>
+                <li>sudo ./aws/install</li>
+                <li>aws --version</li>
+            </ul>
+        </li>
+        <li>aws s3 ls</li>
+        <li>aws s3 cp filename s3://bucketname {Sending to Bucket}</li>
+        <li>aws s3 cp s3://bucketname/filename . {Taking file to Server}</li>
+    </ol>
+</body>
+</html>
